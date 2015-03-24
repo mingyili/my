@@ -1,0 +1,35 @@
+/*============================= list_cont =============================*/
+	.list_cont{}
+	.list_cont .list_title{font-weight:normal;	padding:10px 12px;line-height:20px;	}
+		
+	.list_cont .list_ul{position:relative;}
+	.list_ul .list_li{
+		border-bottom: .5px solid #eee;
+		display:table; width:100%;}
+	.list_li .list_li_a{padding:5px 0;
+		display:table; width:100%; vertical-align:middle;
+		border-collapse:separate; border-spacing:8px;}
+	.list_li .list_cell{
+		display:table-cell; vertical-align:middle; line-height:1.2;
+	}
+	.list_li .list_cell.small{width:10px;}
+	
+	.list_li .list_cell .img_cont{height:26px; width:26px; display:inline-block;}
+	.list_li .list_cell .img_cont  img{width:100%;}
+	
+	.list_li_a.touch, .list_li_a:active{background-color:#efefef;}
+	
+	.list_cell .list_msg{
+		line-height:1; padding:8px;
+		line-height:18px; font-size:12px;position:relative;
+		border-radius:3px; -webkit-border-radius:3px;
+		border:1px solid #ececec; background-color:#fff;
+	}
+	.list_cell .list_msg:before,
+	.list_cell .list_msg:after{
+		content:""; overflow:hidden; height:0px;width:0px;
+		border-width:7px 9px; border-style:solid;
+		border-color:transparent #ececec transparent transparent;
+		position:absolute; left:-18px; top:9px;
+	}
+	.list_cell .list_msg:after{left:-17px;	border-color:transparent #fff transparent transparent;}

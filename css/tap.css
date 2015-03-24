@@ -1,0 +1,58 @@
+/*============================= tap_cont =============================*/
+	.tap_cont{padding:12px 30px;}
+	.tap_target{display:none;width:100%;}
+	.tap_target.active{display:inline-block;}
+	.tap_bar{display:table; width:100%;
+		border-radius:4px; -webkit-border-radius:4px;}
+	.tap_item{display:table-cell; width:10px; text-align:center; vertical-align:middle; line-height:32px;
+		height:32px; border:1px solid #333; border-left:none; background-color:#fff;}
+	.tap_item.active{background-color:#333; color:#fff;}
+	.tap_item:first-child{border-left:1px solid #333; border-radius:4px 0 0 4px; -webkit-border-radius:4px 0 0 4px;}
+	.tap_item:last-child{border-radius:0 4px 4px 0; -webkit-border-radius:0 4px 4px 0;}
+	.tap_item.touch, .tap_item:active{background-color:#eee;}
+	.tap_item.active.touch, .tap_item.active:active{background-color:#000;}
+	
+	.tap_cont.tap_line{padding:0;}
+	.tap_line .tap_item:first-child, .tap_line .tap_item:last-child,
+	.tap_line .tap_bar{border-radius:0px; -webkit-border-radius:0px;}
+	.tap_line .tap_item:first-child{border-left:none;}
+	.tap_line .tap_item:last-child{border-right:none;}
+	.tap_line .tap_item{height:36px; border-top:none; border-color:#eee!important; background-color:#fff!important; color:#aaa!important;}
+	.tap_line .tap_item.active{color:#333;position:relative;}
+	.tap_line .tap_item.active:after{
+		content:""; height:3px; background-color:#333; display:block;
+		position:absolute; right:-1px; left:-1px; bottom:-2px;
+	}
+	.tap_line .tap_bar .tap_item:active{background-color:#eee!important;}
+	
+	.tap_bar.b_white .tap_item{border-color:#eee; color:#888;}
+	.tap_bar.b_white .tap_item.active{background-color:#888; color:#fff;}
+	.tap_line .tap_bar.b_white .tap_item.active{color:#888;}
+	
+	.tap_bar.b_dred .tap_item{border-color:#e5423e; color:#e5423e;}
+	.tap_bar.b_dred .tap_item.active{background-color:#e5423e; color:#fff;}
+	.tap_bar.b_dred .tap_item.active:active,
+	.tap_bar.b_dred .tap_item.active.touch{background-color:#CF1915;}
+	.tap_line .tap_bar.b_dred .tap_item.active{color:#e5423e!important;}
+	.tap_line .tap_bar.b_dred .tap_item.active:after{background-color:#e5423e;}
+	
+	.tap_bar.b_orange .tap_item{border-color:#FF8800; color:#FF8800;}
+	.tap_bar.b_orange .tap_item.active{background-color:#FF8800; color:#fff;}
+	.tap_bar.b_orange .tap_item.active:active,
+	.tap_bar.b_orange .tap_item.active.touch{background-color:#FF8800;}
+	.tap_line .tap_bar.b_orange .tap_item.active{color:#FF8800!important;}
+	.tap_line .tap_bar.b_orange .tap_item.active:after{background-color:#FF8800;}
+
+	.tap_bar.b_green .tap_item{border-color:#06bf04; color:#06bf04;}
+	.tap_bar.b_green .tap_item.active{background-color:#06bf04; color:#fff;}
+	.tap_bar.b_green .tap_item.active:active,
+	.tap_bar.b_green .tap_item.active.touch{background-color:#069905;}
+	.tap_line .tap_bar.b_green .tap_item.active{color:#06bf04!important;}
+	.tap_line .tap_bar.b_green .tap_item.active:after{background-color:#06bf04;}
+	
+	.tap_bar.b_blue .tap_item{border-color:#0a8af2; color:#0a8af2;}
+	.tap_bar.b_blue .tap_item.active{background-color:#0a8af2; color:#fff;}
+	.tap_bar.b_blue .tap_item.active:active,
+	.tap_bar.b_blue .tap_item.active.touch{background-color:#096CBB;}
+	.tap_line .tap_bar.b_blue .tap_item.active{color:#0a8af2!important;}
+	.tap_line .tap_bar.b_blue .tap_item.active:after{background-color:#0a8af2;}

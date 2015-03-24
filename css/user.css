@@ -1,0 +1,33 @@
+/*============================= user_cont =============================*/
+	.user_cont{position: relative; display:table; border-spacing: 0px; width:100%;height:60px; margin-top:-30px; margin-bottom:8px;}
+	.user_img_cont{ display:table-cell; width:10px;	padding:0 10px;	vertical-align:top;}
+	.user_img{ padding:3px;	background-color:#fff; overflow:hidden; box-shadow: 0px 1px 3px rgba(0,0,0,.1);display: inline-block;}
+	.user_img img{ height:54px; max-width:200px;}
+	.user_info_cont{ display:table-cell; padding:0 8px; vertical-align:middle;}
+	
+	.user_info{height:30px; line-height:30px; display:table;width:100%; border-spacing: 0px;}
+	.user_info_cell{display:table-cell; vertical-align:middle;}
+	.user_name{line-height:30px; color:#fff;height:100%;}
+	.user_name .tips{border-radius:4px; -webkit-border-radius:4px; margin-left:5px;}
+
+	/*进度条*/
+	.user_info .user_progress {background: #ccc; width:95%;height:10px;margin:8px 0 0; border-radius:6px;position: relative;}
+	.user_info .rate {position: absolute; top:0;left: 0;	border-radius:6px; height: 10px; width: 20px;}
+	.user_info #currentRate { position: absolute;top: 15px;left: 0;color: #db3434; font-size: 8px; background: #fff999;
+	border: 1px solid #efa800;border-radius: 6px;height:10px;padding: 0 4px;line-height:10px;-moz-background-clip: padding;
+	border-radius: 2px;background-clip: padding-box;-webkit-background-clip: padding-box; }
+	.user_info .trangle {position: absolute;top:8px;left:10px;border: 4px solid transparent;border-bottom:4px solid #efa800;}
+	.user_info .rate {
+		-webkit-background-size: 10px 10px;
+		background-size: 10px 10px;
+		background-image: -webkit-gradient(linear, left top, right bottom, color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)), color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent), to(transparent));
+		background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		-webkit-animation: animate-stripes 3s linear infinite;
+		-webkit-transition: width .3s ease;transition: width .3s ease;
+	}
+	@-webkit-keyframes animate-stripes { 
+		0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+	}

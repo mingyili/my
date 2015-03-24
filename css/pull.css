@@ -1,0 +1,18 @@
+	
+/*============================= pull_cont =============================*/
+	.pull_cont{text-align:center; height:40px;line-height:40px;
+		background-color:#fff; font-size:12px; color:#888;display:block;
+	}
+	.pull_cont .pull_img{height:40px; width:20px;display:none;}
+	.pull_cont.loading .pull_img{display:inline-block;}
+	.pull_cont.loading .pull_icon{display:none;}
+	.pull_cont .pull_img img{width:18px; height:18px; margin-top:-4px;}
+	
+	.pull_cont .pull_icon{ display:inline-block;
+		-webkit-transform:rotate(0deg) translateZ(0);
+		-webkit-transition-property:-webkit-transform;
+		-webkit-transition-duration:250ms;}
+	.pull_cont.flip .pull_icon{-webkit-transform:rotate(180deg) translateZ(0);}
+	.pull_cont .pull_text{font-size:12px; display:inline-block;}
+	
+	.pull_cont.none .pull_icon, .pull_cont.none .pull_img{display:none;}
