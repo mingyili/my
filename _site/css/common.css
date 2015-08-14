@@ -1,21 +1,29 @@
 /*============================= body =============================*/
-	*{margin:0;padding:0;border:0;outline:0;vertical-align:baseline; -webkit-tap-highlight-color:rgba(0,0,0,0);}
-	img{border:0 none; vertical-align: middle; max-width:100%;}ul,li{list-style:none;}i,em{font-style:normal;}
-	body{color:#333; margin:0 auto;min-width:320px;font-size:14px;font-family: Helvetica,"STHeiti STXihei","Microsoft JhengHei","Microsoft YaHei",Tohoma,Arial;line-height:1.5;-webkit-text-size-adjust:100%;}
-	a{text-decoration:none; color:#333;}p{margin:0px;}h3{font-size:1em;}
-	table{padding:0; margin:0; border-collapse: collapse; width:100%;}
-	body,html{height:100%;}
-	html.fixed, .fixed body{overflow: hidden;}
-	input, select, textarea{
-		display: inline-block; padding:0; margin:0; outline:0;
-		font-weight: 400; text-align: left; font:inherit; color:inherit;
-		width:100%; line-height:22px; font-size:inherit;height:22px;
-		-webkit-appearance: none; /*去除默认阴影*/
-		-webkit-box-flex: 1; vertical-align: baseline;
-		-webkit-font-smoothing: antialiased;
-		text-rendering: optimizeLegibility;
-		background-color: inherit;
-	}
+	/**{margin:0;padding:0;border:0;outline:0;vertical-align:baseline; -webkit-tap-highlight-color:rgba(0,0,0,0);}*/
+html, body {height: 100%;}
+body {
+  color: #333;min-width:320px;
+  font-family: Helvetica,"STHeiti STXihei","Microsoft JhengHei","Microsoft YaHei",Tohoma,Arial;
+  font-size: 14px;line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust:100%;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {margin: 0;}
+h3, h4, h5, h6 {font-size: 1em;}
+ul{padding-left: 0;list-style-type: none;}
+a{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:link{text-decoration: none;}
+img{border:0; vertical-align: middle; max-width:100%;}
+input, select, textarea{
+	display: inline-block; outline:0; font-weight: 400; font:inherit; color:inherit;
+	width:100%; line-height:22px; font-size:inherit;height:22px;
+	-webkit-appearance: none; /*去除默认阴影*/
+	-webkit-box-flex: 1; vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility; background-color: inherit;
+}
+textarea {resize: none;}
+html.fixed, .fixed body{overflow: hidden;}
 
 /*============================== fonts =============================*/
 	@font-face {
@@ -677,7 +685,7 @@
 	.user_cont{position: relative; display:table; border-spacing: 0px; width:100%;height:60px; margin-top:-30px; margin-bottom:8px;}
 	.user_img_cont{ display:table-cell; width:10px;	padding:0 10px;	vertical-align:top;}
 	.user_img{background-color:rgba(255,255,255,.6); padding:2px; overflow:hidden; box-shadow: 0px 1px 3px rgba(0,0,0,.1);display: inline-block;}
-	.user_img img{ height:54px; max-width:200px;}
+	.user_img img{ height:54px; width: 54px;}
 	.user_info_cont{ display:table-cell; padding:0 8px; vertical-align:middle;}
 	
 	.user_info{height:30px; line-height:30px; display:table;width:100%; border-spacing: 0px;}

@@ -497,7 +497,7 @@ var My = (function() {
 			chtml += my.WxName+"</h3><br/><span>到微信 “通讯录” 中搜索关注</span></div>";
         }else{
 			c.style.cssText = "position:absolute;z-index:1100;width:100%;height:100%;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,.6);";
-			chtml = "<div style = 'width:180px; height:180px; margin:30% auto; padding:25px; background-color:#fff; text-align:center;'><img src='" + my.FollowImg + "' style='width:160px;height:160px;'/><p style='margin:0; font-size:12px;'>长按二维码，识别并关注我们</p>";
+			chtml = "<div style = 'width:180px; height:180px; margin:25vh auto; padding:25px; background-color:#fff; text-align:center;'><img src='" + my.FollowImg + "' style='width:160px;height:160px;'/><p style='margin:0; font-size:12px;'>长按二维码，识别并关注我们</p>";
 		}
 		
 		c.innerHTML = chtml;

@@ -15,8 +15,8 @@
 .logo{height: 28px;}
 </style>
 </head>
-<body id="body">
-	<div class="container" id="J_content" >
+<body id="body" class="bg_gray">
+	<div class="container bg_white" id="J_content" >
 		
 		<!-- 顶部导航 strat -->
 		<div class="navbar nav_fix_top border_b bg_white">
@@ -91,7 +91,6 @@
 				
 				<div class="btn_cont">
 					<a class="btn b_blue j_load" >加载...</a>
-					<a class="btn b_blue btn_line btn_half j_loadclose" >关闭加载</a>
 				</div>
 				<div class="btn_cont">
 					<a class="btn b_blue j_share"  >分享</a>
@@ -151,8 +150,8 @@
 	</div>
 	
 	<!-- 右侧滑出层 -->
-	<div class="fix_cont hide" id="J_right">
-		<div class="absolute_cont hide bg_white">
+	<div class="fix_all hide" id="J_right">
+		<div class="absolute_all j_div hide bg_white">
 			<div class="acont_title">
 				<span class="">这是新层</span>
 				<span class="close icon-close fr t_center r6 pd8 mt-8" id="J_closeR"></span></div>
@@ -254,34 +253,28 @@
 	</div>
 	
 	<!--底部工具按钮 -->
-	<div class="tool_cont hide" id="J_tool">
-		<div class="btn_cont mt-8">
-			<a class="btn b_white btn_big J_info">普通按钮</a>
-		</div>
-		<div class="btn_cont mt-8">
-			<a class="btn b_dred btn_big">删除按钮</a>
-		</div>
-		<p class="clearfix blank"></p>
-		<div class="btn_cont mt-8">
-			<a class="btn b_gray btn_big j_cancel">取消</a>
-		</div>
+	<div class="fix_bottom bg_white list_cont t_center f16 hide" id="J_tool">
+        <p class="list_li noselect">
+            <a class = "list_li_a border_b">普通按钮</a>
+        </p>
+        <p class="list_li noselect">
+            <a class = "list_li_a border_b dred" href="">红色按钮</a>
+        </p>
+        <div class="blank bg_gray"></div>
+        <p class="list_li noselect">
+            <a class = "list_li_a j_cancal">取消</a>
+        </p>
 	</div>
 	
 	<!-- 弹出层 strat -->
-	<div class="pop_cont  hide" id="J_pop">
+	<div class="pop_cont hide" id="J_pop">
 		<div class="pop_tit bg_blue"><span class="tit">活动说明</span>
-			<span class="close icon-close fr rAll pd5 mt-4 f12" id="j_popClose"></span></div>
+			<span class="close icon-close fr rAll pd5 mt-4 f12" id="j_popClose"></span>
+		</div>
 		<div class="pop_div">
 			<div class="info_section"> 
-				<h6>礼盒说明</h6>
-				<p>1adcadcadsacadscadcsacd234</p> 
-				<h6>活动时间</h6>
-				<p>2014-12-11 17:36 -- 2014-12-20 17:36</p>
-				<h6>活动规则</h6>
-				<p>1、参与活动需要关注商家;</p>
-				<p>2、领取礼盒后，您需要 1 位小伙伴的帮助;</p>
-				<p>3、每人仅有 2 次拆礼盒的机会;</p>
-				<p>4、先拆先得，号召伙伴们的力量，祝您好运！</p>
+				<h6>页面说明</h6>
+				<p>测试测试测试</p> 
 			</div>
 		</div>
 	</div>
@@ -342,14 +335,8 @@ function removeError(_this){
 }
 </script>
 <script type="text/javascript">
-	My.WxName = "dddd";
 	My.FollowImg = "images/2Dcode.png";
 	
-	
-	$(".J_info").bind(Click, function(){
-		hideTool('#J_tool', true);
-		showPop("#J_pop");
-	});
 	
 	$("#j_popClose").bind(Click, function(){
 		hidePop("#J_pop");
@@ -376,19 +363,21 @@ function removeError(_this){
 		});
 	});
 	//底部工具
-	$(".j_tool").bind(Click, function(){showTool('#J_tool');});
-	$(".j_cancel").bind(Click, function(){hideTool('#J_tool');});
+	$(".j_tool").bind(Click, function(){
+		showLayer('#J_tool', 'slideUpAnim');
+	});
+	$(".j_cancal").bind(Click, function(){
+		hideLayer('#J_tool', 'slideUpAnim');
+	});
 	//右侧层
 	$(".j_right").bind(Click, function(){showSlideR('#J_right', 'slideLeftAnim');});
-	$("#J_closeR").bind(Click, function(){hideSlideR('#J_right', 'slideLeftAnim');});
-	$("#J_right").bind("swipeRight", function(){hideSlideR('#J_right', 'slideLeftAnim');});
-	
+	$("#J_closeR").bind(Click, function(){hideSlideR('#J_right', 'slideLeftAnim');});	
 	
 	$(".j_tip").bind(Click, function(){
-		My.showTip("这是提示信息", 5000);
+		My.showTip("这是提示信息");
 	});
 	$(".j_tipsuccess").bind(Click, function(){
-		My.successTip("成功提示信息<br/>改变隐藏时间", 3000);
+		My.successTip("成功提示信息<br/>改变隐藏时间", 500);
 	});
 	$(".j_tiperror").bind(Click, function(){
 		My.errorTip("错误提示信息");
@@ -404,20 +393,9 @@ function removeError(_this){
 		My.hideBarTip();
 	});
 	
-	$(".j_share").bind(Click, function(){
-		My.showShare();
-	});
-	$(".j_follow").bind(Click, function(){
-		My.showFollow();
-	});
-	
 	$(".j_load").bind(Click, function(){
-		//My.showMask();
 		My.showLoad("加载页面");
-	});
-	$(".j_loadclose").bind(Click, function(){
-		//My.hideMask();
-		My.hideLoad();
+		setTimeout(My.hideLoad, 800);
 	});
 </script>
 </body>
